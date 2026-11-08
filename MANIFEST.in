@@ -1,0 +1,7 @@
+include LICENSE README.md README.ru.md
+include requirements.txt release_manifest.json
+include .github/workflows/ci.yml
+include .gitignore
+recursive-include examples *.py *.jsonl
+recursive-include tests *.py
+recursive-include models *.md

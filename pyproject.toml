@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personal-threats"
+version = "0.3.0"
+description = "Local dialogue analysis with durable SQLite history and ONNX inference"
+readme = "README.md"
+requires-python = ">=3.14"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = ["ijson==3.6.0"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.14",
+]
+
+[project.optional-dependencies]
+cpu = [
+    "numpy==2.5.4", "onnx==1.23.2", "onnxruntime==1.31.1",
+    "tokenizers==0.23.3",
+]
+cuda = [
+    "numpy==2.5.4", "onnx==1.23.2", "onnxruntime-gpu==1.31.1",
+    "tokenizers==0.23.3",
+]
+
+[project.scripts]
+personal-threats = "personal_threats.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 79
+target-version = ["py314"]

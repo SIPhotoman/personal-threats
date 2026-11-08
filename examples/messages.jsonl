@@ -1,0 +1,2 @@
+{"dialog_id":"dialog-demo","message_id":"1","sender_id":"user-a","text":"Good morning. Доброе утро.","timestamp":"2026-01-01T10:00:00Z"}
+{"dialog_id":"dialog-demo","message_id":"3","sender_id":"user-a","text":"Please save the message. Сохрани переписку.","timestamp":"2026-01-01T10:02:00Z","reply_to":{"message_id":"2"}}
